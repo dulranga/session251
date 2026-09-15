@@ -1,0 +1,34 @@
+@import "../01-static/styles.css";
+
+.counter {
+  margin: 12px 0 0;
+  color: #64748b;
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+button:disabled {
+  cursor: wait;
+  opacity: 0.6;
+}
+
+.result[data-status="loading"] {
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+.result[data-status="error"] {
+  background: #fff1f2;
+  color: #be123c;
+}
+
+.result[data-status="success"] {
+  background: #ecfdf5;
+  color: #047857;
+}
+
+.result small {
+  display: block;
+  margin-top: 6px;
+}
+

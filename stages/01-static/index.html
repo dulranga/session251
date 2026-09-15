@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A first HTML and CSS greeting page" />
+    <title>Greeting Generator — Static</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="greeting-card" aria-labelledby="page-title">
+        <p class="eyebrow">Checkpoint 01 · HTML + CSS</p>
+        <h1 id="page-title">Greeting Generator</h1>
+        <p class="intro">Enter a name and imagine the greeting we will build.</p>
+
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="name" name="name" placeholder="Ada Lovelace" autocomplete="name" />
+        </div>
+
+        <button type="button">Generate greeting</button>
+
+        <div class="result" aria-live="polite">
+          <p>Your greeting will appear here.</p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
+

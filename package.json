@@ -1,0 +1,26 @@
+{
+  "name": "web-development-first-steps",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A 90-minute, platform-agnostic introduction to HTML, CSS, JavaScript, Node, React, and Tailwind CSS.",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "workspaces": [
+    "backend",
+    "stages/*"
+  ],
+  "scripts": {
+    "dev:01": "concurrently -k -n API,WEB -c yellow,cyan \"npm run dev -w @workshop/backend\" \"npm run dev -w @workshop/01-static\"",
+    "dev:02": "concurrently -k -n API,WEB -c yellow,cyan \"npm run dev -w @workshop/backend\" \"npm run dev -w @workshop/02-vanilla-click\"",
+    "dev:03": "concurrently -k -n API,WEB -c yellow,cyan \"npm run dev -w @workshop/backend\" \"npm run dev -w @workshop/03-vanilla-api\"",
+    "dev:04": "concurrently -k -n API,WEB -c yellow,cyan \"npm run dev -w @workshop/backend\" \"npm run dev -w @workshop/04-react-component\"",
+    "dev:05": "concurrently -k -n API,WEB -c yellow,cyan \"npm run dev -w @workshop/backend\" \"npm run dev -w @workshop/05-react-api\"",
+    "dev:06": "concurrently -k -n API,WEB -c yellow,cyan \"npm run dev -w @workshop/backend\" \"npm run dev -w @workshop/06-react-tailwind\"",
+    "test": "npm run test --workspaces --if-present",
+    "build": "npm run build --workspaces --if-present"
+  },
+  "devDependencies": {
+    "concurrently": "10.0.5"
+  }
+}
